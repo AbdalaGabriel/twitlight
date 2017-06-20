@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Interfaz</title>
+</head>
+<body>
+	<h1>Requester</h1>
+
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+console.log("init");
+
+var time = setInterval(myTimer, 1000);
+ var requesturl = "index.php?twit=1";
+function myTimer() {
+	$("body").append("<p>Twit</p>");
+
+   
+    var ajax =  $.get(requesturl, function(res)
+        {
+           //console.log(res);
+        })
+
+        .done(function(res) 
+        {
+           console.log( "- Exito Ajax Carga" );
+
+                    
+        })
+}
+
+
+</script>
