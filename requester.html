@@ -13,10 +13,10 @@
 <script>
 console.log("init");
 
-var time = setInterval(myTimer, 1000);
- var requesturl = "index.php?twit=1";
+var time = setInterval(myTimer, 5000);
+ var requesturl = "tw/index2.php?tw=guerra";
 function myTimer() {
-	$("body").append("<p>Twit</p>");
+	
 
    
     var ajax =  $.get(requesturl, function(res)
@@ -26,7 +26,7 @@ function myTimer() {
 
         .done(function(res) 
         {
-           console.log( "- Exito Ajax Carga" );
+           console.log( "- Exito Ajax Carga: "+res );
 
                     
         })
